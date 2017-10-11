@@ -1,6 +1,6 @@
 %%% This script is used to calibrate load duration curve using a nonlinear
 %%% function, in order to get valuation function.
-%%% inputs: 
+%%% inputs:
 %%%	inputLDC - the LDC you want to calibrate
 %%% p0 - average electricity price
 %%% elasticity - average elasticty during the whole horzion
