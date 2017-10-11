@@ -9,6 +9,12 @@
 plotFigures = 1; % swith to enable ploting figures
 
 % step 0: specify your input data
+lambda = ;
+a0 =  ;
+a1 =  ;
+b =    ;
+p0 = ;
+T = ;
 h_omega = ;
 omegaIdxN = max(size(h_omega)); % the number of omega
 Lmax = ; % max L index, when you do ecomonic dispatch
@@ -40,12 +46,7 @@ end
 % parameters of value function
 %VLt = -a1*(1/T)^(1/lambda)/(1/lambda+1)*t^(1/lambda+1)+(a0-b*L)*t
 % simplied as VLt = m*t^(1/lambda+1)+(a0-b*L)*t;
-lambda =  ;  %1.449;
-a0 =  ;
-a1 =  ;
-b =    ;
-p0 = ;
-T = ;
+
 m = -a1*(1/T)^(1/lambda)/(1/lambda+1);
 
 reliablity_vec = 1/omegaIdxN:1/omegaIdxN:1;
