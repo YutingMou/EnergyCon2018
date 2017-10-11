@@ -1,14 +1,14 @@
-%%% This script is used to disign a price menu accrodinig to my submission
-%%% to EnergyCon2018
-%%% inputs: 
-%%% value function (parameters from load duration curve)
-%%% cost function
-%%% h(\omega)
-%%% outputs: ptice function p(L), f(L) and f(L)
+% This script is used to disign a price menu accrodinig to my submission
+% to EnergyCon2018
+% inputs: 
+% value function (parameters from load duration curve)
+% cost function
+% h(\omega)
+% outputs: ptice function p(L), f(L) and f(L)
 
 plotFigures = 1; % swith to enable ploting figures
 
-%% step 0: specify your input data
+% step 0: specify your input data
 h_omega = ;
 omegaIdxN = max(size(h_omega)); % the number of omega
 Lmax = ; % max L index, when you do ecomonic dispatch
@@ -19,7 +19,7 @@ for i = 1:omegaIdxN
 end
 cOmega=; % cost at load level L in senario omega
 
-%% step 1: c(L,r) and R(L)
+% step 1: c(L,r) and R(L)
 cOmega(MC==3000)=3000; % get the index when MC==3000 and set c to 3000 meaning this slice is not served
 c = cOmega;
 % check R(L) of each L level
@@ -35,7 +35,7 @@ for L = 1:Lmax
     end
     
 end
-%% step 2: r(L) and t(L)
+% step 2: r(L) and t(L)
 % solve this problem. traverse over all the cases of reliablity_vec and find the best objective value
 % parameters of value function
 %VLt = -a1*(1/T)^(1/lambda)/(1/lambda+1)*t^(1/lambda+1)+(a0-b*L)*t
@@ -103,7 +103,7 @@ if plotFigures
     ylabel('Duration (hours)');
 end
 
-%% step 3: design the menu and obtain p(L), f(L) and g(L)
+% step 3: design the menu and obtain p(L), f(L) and g(L)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% calculate PL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,7 +129,7 @@ for L = 1:L0
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% calculate f(t) and  calculate g(r)
+% calculate f(t) and  calculate g(r)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %v_t = -a1*(t/T)^(1/lambda) -b*L + a0
 Lt = 1:L0;
@@ -176,7 +176,7 @@ if plotFigures
     legend('g(L)','Reliability')
 end
 
-%% cost, price and valuation
+% cost, price and valuation
 cost = zeros(L0,1);
 valueFunction = zeros(L0,1);
 
