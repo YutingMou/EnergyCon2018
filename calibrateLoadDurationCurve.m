@@ -5,7 +5,7 @@
 %%% p0 - average electricity price
 %%% elasticity - average elasticty during the whole horzion
 %%% outputs: parameters a0, a1, b, labmda
-%%% According to the theory in EnergyCon2018Appendix.pdf, available at
+%%% According to the theory in EnergyCon2018Appendix.pdf
 %%% author: Yuting Mou
 %%% date: 2017-10-10
 %%% email: yuting.mou(AT)outlook.com
