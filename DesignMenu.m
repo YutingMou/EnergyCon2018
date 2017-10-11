@@ -7,6 +7,7 @@
 %%% outputs: ptice function p(L), f(L) and f(L)
 
 plotFigures = 1; % swith to enable ploting figures
+
 %% step 0: specify your input data
 h_omega = ;
 omegaIdxN = max(size(h_omega)); % the number of omega
