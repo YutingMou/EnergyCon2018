@@ -4,6 +4,8 @@
 %%% value function (parameters from load duration curve)
 %%% cost function
 %%% h(\omega)
+%%% outputs: ptice function p(L), f(L) and f(L)
+
 plotFigures = 1; % swith to enable ploting figures
 %% step 0: specify your input data
 h_omega = ;
@@ -157,14 +159,14 @@ if plotFigures
     hold on;
     plot(fL,'linewidth',1);
     xlabel('L(MW)');
-    ylabel('Price (€/MW \cdot Month)');
+    ylabel('Price (â‚¬/MW \cdot Month)');
     legend('P(L)','f(L)')   
     
     subplot(1,2,2);
     yyaxis left
     plot(gL,'linewidth',1);
     xlabel('L(MW)');
-    ylabel('Price (€/MW \cdot Month)');
+    ylabel('Price (â‚¬/MW \cdot Month)');
     hold on
     yyaxis right
     plot(reliablity(L_supplied),'linewidth',1);
@@ -188,6 +190,6 @@ if plotFigures
     figure
     plot(L_supplied,cost,L_supplied,valueFunction,L_supplied,price,'linewidth',1);   
     xlabel('L(MW)');
-    ylabel('Price (€/MW)');
+    ylabel('Price (â‚¬/MW)');
     legend('Cost','Valuation','Price');
 end
