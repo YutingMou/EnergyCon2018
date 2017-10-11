@@ -10,7 +10,6 @@
 %%% date: 2017-10-10
 %%% email: yuting.mou(AT)outlook.com
 
-
 %% step 0: specify your input data
 inputLDC = 720:-1:1;    % inputLDC is a row vector
 p0 = 213; 
@@ -77,9 +76,3 @@ plot(tempy2,'linewidth',1);
 legend('Actual','Calibrated')
 xlabel('Duration (Hours)');
 ylabel('Power (MW)')
-
-
-
-
-
-
